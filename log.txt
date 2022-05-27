@@ -1,0 +1,93 @@
+warning: unused import: `diesel::prelude`
+ --> src/game/navigator/category.rs:3:5
+  |
+3 | use diesel::prelude::*;
+  |     ^^^^^^^^^^^^^^^
+  |
+  = note: `#[warn(unused_imports)]` on by default
+
+warning: unused import: `diesel::prelude`
+ --> src/game/navigator/official.rs:4:5
+  |
+4 | use diesel::prelude::*;
+  |     ^^^^^^^^^^^^^^^
+
+warning: associated function is never used: `new_with_encryption`
+  --> src/codec/net.rs:23:12
+   |
+23 |     pub fn new_with_encryption() -> Self {
+   |            ^^^^^^^^^^^^^^^^^^^
+   |
+   = note: `#[warn(dead_code)]` on by default
+
+warning: associated function is never used: `new`
+ --> src/codec/rc4.rs:8:12
+  |
+8 |     pub fn new() -> Self {
+  |            ^^^
+
+warning: constant is never used: `USER_RIGHTS`
+  --> src/message/outgoing.rs:15:1
+   |
+15 | pub const USER_RIGHTS: i32 = 2;
+   | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: constant is never used: `ROOM_FLOOR_ITEMS`
+  --> src/message/outgoing.rs:23:1
+   |
+23 | pub const ROOM_FLOOR_ITEMS: i32 = 32;
+   | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: constant is never used: `ROOM_WALL_ITEMS`
+  --> src/message/outgoing.rs:24:1
+   |
+24 | pub const ROOM_WALL_ITEMS: i32 = 45;
+   | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: 7 warnings emitted
+
+    Finished dev [unoptimized + debuginfo] target(s) in 0.04s
+     Running `target/debug/hebbo`
+[2021-08-27T03:14:11Z INFO  hebbo] server now running on 127.0.0.1:9001
+[2021-08-27T03:14:24Z INFO  hebbo::server] received connection from 127.0.0.1
+[2021-08-27T03:14:24Z INFO  hebbo::server] received disconnect from 127.0.0.1
+[2021-08-27T03:14:24Z INFO  hebbo::server] received connection from 127.0.0.1
+[2021-08-27T03:14:24Z INFO  hebbo::codec::net] received [206] b"H"
+[2021-08-27T03:14:24Z INFO  hebbo::game::handlers::handshake::init_crypto] handling init_crypto event
+init_crypto
+[2021-08-27T03:14:24Z INFO  hebbo::game::session] handler sending b"DAQBHHIIJHKHPAIQAdd-MM-yyyy\x02SAHPBHebbo\x02QBH\x01" to 77160f93-5a98-4d70-ac1b-c3e6d07f24dc
+[2021-08-27T03:14:24Z INFO  hebbo::codec::net] received [415] b"@O000-111-222-333XhQ"
+user_sso_login
+[2021-08-27T03:14:24Z INFO  hebbo::game::session] handler sending b"@C\x01" to 77160f93-5a98-4d70-ac1b-c3e6d07f24dc
+[2021-08-27T03:14:24Z INFO  hebbo::codec::net] received [7] b""
+get_user_info
+[2021-08-27T03:14:24Z INFO  hebbo::game::session] handler sending b"@E1\x02xenni\x02ch-210-66.lg-270-82.hd-180-1.sh-290-80.hr-100-45\x02M\x02Motto\x02xenni\x02H01-01-1970 00:00:00\x02HHHHH`a`A\x01" to 77160f93-5a98-4d70-ac1b-c3e6d07f24dc
+[2021-08-27T03:14:24Z INFO  hebbo::codec::net] received [482] b"@ELogin@Fsocket@Nclient.auth_ok@@"
+[2021-08-27T03:14:24Z INFO  hebbo::codec::net] received [8] b""
+get_user_balance
+[2021-08-27T03:14:24Z INFO  hebbo::game::session] handler sending b"@F500.0\x02\x01FvX}AH\x01" to 77160f93-5a98-4d70-ac1b-c3e6d07f24dc
+[2021-08-27T03:14:24Z INFO  hebbo::codec::net] received [26] b"@Jhabbo_club"
+get_user_subs
+[2021-08-27T03:14:24Z INFO  hebbo::game::session] handler sending b"@Ghabbo_club\x02HHHIIHHHHRGQF\x01" to 77160f93-5a98-4d70-ac1b-c3e6d07f24dc
+[2021-08-27T03:14:24Z INFO  hebbo::codec::net] received [3032] b""
+get_user_ach_score
+[2021-08-27T03:14:24Z INFO  hebbo::game::session] handler sending b"F{H\x01" to 77160f93-5a98-4d70-ac1b-c3e6d07f24dc
+[2021-08-27T03:14:24Z INFO  hebbo::codec::net] received [228] b""
+get_sound_settings
+[2021-08-27T03:14:24Z INFO  hebbo::game::session] handler sending b"|@PYPYPY\x01" to 77160f93-5a98-4d70-ac1b-c3e6d07f24dc
+[2021-08-27T03:14:24Z INFO  hebbo::codec::net] received [3110] b""
+get_motd
+[2021-08-27T03:14:24Z INFO  hebbo::game::session] handler sending b"LjIWelcome to Hebbo!\x02\x01" to 77160f93-5a98-4d70-ac1b-c3e6d07f24dc
+[2021-08-27T03:14:24Z INFO  hebbo::codec::net] received [12] b""
+init_messenger
+[2021-08-27T03:14:24Z INFO  hebbo::game::session] handler sending b"@LXKAXKAXHCXSDHH\x01" to 77160f93-5a98-4d70-ac1b-c3e6d07f24dc
+[2021-08-27T03:14:24Z INFO  hebbo::codec::net] received [321] b"@Exenni"
+get_user_ignores
+[2021-08-27T03:14:24Z INFO  hebbo::game::session] handler sending b"FdH\x01" to 77160f93-5a98-4d70-ac1b-c3e6d07f24dc
+[2021-08-27T03:14:24Z INFO  hebbo::codec::net] received [26] b"@Jhabbo_club"
+get_user_subs
+[2021-08-27T03:14:24Z INFO  hebbo::game::session] handler sending b"@Ghabbo_club\x02HHHIIHHHHRGQF\x01" to 77160f93-5a98-4d70-ac1b-c3e6d07f24dc
+[2021-08-27T03:14:24Z INFO  hebbo::codec::net] received [151] b""
+get_nav_cats
+[2021-08-27T03:14:24Z INFO  hebbo::game::session] handler sending b"C]SAIParty, Chat and Chill\x02IJFood and Drink\x02IKCreativity and Other\x02IPAShops and Services\x02IQAGaming and Mazes\x02IRATrading, Shopping, Selling\x02ISAGroups and Role-Playing\x02I\x01" to 77160f93-5a98-4d70-ac1b-c3e6d07f24dc
+[2021-08-27T03:14:24Z INFO  hebbo::codec::net] received [233] b""

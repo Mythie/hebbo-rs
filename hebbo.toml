@@ -1,0 +1,10 @@
+[server]
+ip = "127.0.0.1"
+port = 9001
+
+[database]
+hostname="localhost"
+username="hebbo"
+password="password"
+database="hebbo"
+
